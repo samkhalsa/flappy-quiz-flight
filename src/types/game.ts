@@ -8,22 +8,24 @@ export interface Bird {
 export interface Pipe {
   x: number;
   topHeight: number;
-  bottomY: number;
-  width: number;
-  gap: number;
-  passed: boolean;
+  bottomY?: number;
+  width?: number;
+  gap?: number;
+  passed?: boolean;
+  scored: boolean;
 }
 
 export interface QuestionZone {
-  id: string;
+  id?: string;
   x: number;
   y: number;
   width: number;
   height: number;
   category: 'math' | 'science' | 'language';
   question: Question;
-  visible: boolean;
-  answered: boolean;
+  visible?: boolean;
+  answered?: boolean;
+  triggered: boolean;
 }
 
 export interface Question {
@@ -44,15 +46,16 @@ export interface Particle {
 }
 
 export interface GameState {
-  bird: Bird;
-  pipes: Pipe[];
-  questionZones: QuestionZone[];
-  particles: Particle[];
+  bird?: Bird;
+  pipes?: Pipe[];
+  questionZones?: QuestionZone[];
+  particles?: Particle[];
   score: number;
+  bonusScore: number;
   gameOver: boolean;
   gameStarted: boolean;
-  lastPipeTime: number;
-  lastQuestionZoneTime: number;
+  lastPipeTime?: number;
+  lastQuestionZoneTime?: number;
 }
 
 export const GAME_CONFIG = {
