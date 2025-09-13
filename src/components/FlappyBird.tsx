@@ -30,7 +30,7 @@ const FlappyBird: React.FC = () => {
 
   // Game physics and rendering
   const updateGame = useCallback(() => {
-    if (!gameState.gameStarted || gameState.gameOver) return;
+    if (!gameState.gameStarted || gameState.gameOver || activeQuestionZone) return;
 
     setGameState(prev => {
       const newState = { ...prev };
