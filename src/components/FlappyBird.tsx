@@ -41,7 +41,7 @@ const FlappyBird: React.FC = () => {
 
       // Ground collision
       if (newState.bird.y + newState.bird.radius >= GAME_CONFIG.CANVAS_HEIGHT - GAME_CONFIG.GROUND_HEIGHT) {
-        newState.gameOver = true;
+        newState.gameOver = false;
         return newState;
       }
 
@@ -120,7 +120,7 @@ const FlappyBird: React.FC = () => {
 
         if (birdRight > pipeLeft && birdLeft < pipeRight) {
           if (birdTop < pipe.topHeight || birdBottom > pipe.bottomY) {
-            newState.gameOver = true;
+            newState.gameOver = false;
           }
         }
       });
