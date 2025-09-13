@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Flappy Bird Game Design System - Retro Gaming Aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Sky and background colors */
+    --background: 198 100% 85%;
+    --foreground: 0 0% 15%;
 
+    /* Game UI colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Bird and primary elements */
+    --primary: 45 98% 65%;
+    --primary-foreground: 0 0% 15%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Pipes and obstacles */
+    --secondary: 120 60% 40%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Ground and muted elements */
+    --muted: 30 70% 70%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Question zones and highlights */
+    --accent: 280 85% 70%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Danger/collision */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI borders */
+    --border: 0 0% 85%;
+    --input: 0 0% 95%;
+    --ring: 45 98% 65%;
 
-    --radius: 0.5rem;
+    /* Game specific colors */
+    --game-sky: 198 100% 85%;
+    --game-ground: 120 30% 25%;
+    --game-pipe: 120 60% 40%;
+    --game-bird: 45 98% 65%;
+    --game-score: 0 0% 100%;
+    
+    /* Question zone colors */
+    --zone-math: 210 85% 65%;
+    --zone-science: 120 85% 60%;
+    --zone-language: 280 85% 70%;
+    
+    /* Effects and particles */
+    --effect-sparkle: 60 100% 80%;
+    --effect-glow: 45 100% 70%;
+
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 

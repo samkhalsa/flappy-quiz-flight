@@ -57,6 +57,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        game: {
+          sky: "hsl(var(--game-sky))",
+          ground: "hsl(var(--game-ground))",
+          pipe: "hsl(var(--game-pipe))",
+          bird: "hsl(var(--game-bird))",
+          score: "hsl(var(--game-score))",
+        },
+        zone: {
+          math: "hsl(var(--zone-math))",
+          science: "hsl(var(--zone-science))",
+          language: "hsl(var(--zone-language))",
+        },
+        effect: {
+          sparkle: "hsl(var(--effect-sparkle))",
+          glow: "hsl(var(--effect-glow))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +96,30 @@ export default {
             height: "0",
           },
         },
+        "bird-flap": {
+          "0%, 100%": { transform: "rotate(-5deg)" },
+          "50%": { transform: "rotate(5deg)" },
+        },
+        "pipe-move": {
+          "0%": { transform: "translateX(100vw)" },
+          "100%": { transform: "translateX(-200px)" },
+        },
+        "sparkle": {
+          "0%, 100%": { opacity: "0", transform: "scale(0.5)" },
+          "50%": { opacity: "1", transform: "scale(1)" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bird-flap": "bird-flap 0.3s ease-in-out infinite",
+        "pipe-move": "pipe-move 4s linear infinite",
+        "sparkle": "sparkle 0.6s ease-in-out",
+        "float": "float 2s ease-in-out infinite",
       },
     },
   },
